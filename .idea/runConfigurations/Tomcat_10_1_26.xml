@@ -11,9 +11,9 @@
     <server-settings>
       <option name="BASE_DIRECTORY_NAME" value="b0d28331-5808-4507-988f-e3a2dbd8f2b4" />
     </server-settings>
+    <log_file alias="Tomcat Manager Log" path="%IDEA_RUN:CATALINA_BASE%/logs/manager.*" />
     <predefined_log_file enabled="true" id="Tomcat" />
     <predefined_log_file enabled="true" id="Tomcat Catalina" />
-    <predefined_log_file id="Tomcat Manager" />
     <predefined_log_file id="Tomcat Host Manager" />
     <predefined_log_file id="Tomcat Localhost Access" />
     <RunnerSettings RunnerId="Debug">

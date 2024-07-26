@@ -1,5 +1,6 @@
 package pl.softra;
 
+import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
@@ -12,8 +13,15 @@ import static java.util.Map.of;
 /**
  * Root resource (exposed at "myresource" path)
  */
-@Path("myresource")
+@Path("/myresource")
 public class MyResource {
+
+    @Inject
+    MyService myService;
+
+    public MyResource() {
+        System.out.printf("");
+    }
 
     /**
      * Method handling HTTP GET requests. The returned object will be sent
@@ -22,9 +30,9 @@ public class MyResource {
      * @return String that will be returned as a text/plain response.
      */
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public Map<String, String> getIt() {
-        return of("dupa", "dupa");
+        var dupa = of("dupa", "dupa");
+        return dupa;
     }
 
 }
